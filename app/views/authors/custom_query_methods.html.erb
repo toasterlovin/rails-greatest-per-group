@@ -1,0 +1,17 @@
+<h2>Authors</h2>
+<p>This view shows a list of authors along with the title of their newest post, but without the date that post was published. This is because it implements a Greatest Per Group query – thus avoiding the N+1 query problem – using Custom Query Methods, which are quite limited.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Newest Post</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= content_tag_for :tr, @authors do |author| %>
+      <td><%= author.full_name %></td>
+      <td><%= author.newest_post_title %></td>
+    <% end %>
+  </tbody>
+</table>
