@@ -11,4 +11,8 @@ class AuthorsController < ApplicationController
                          ORDER BY author_id, created_at DESC)
               AS newest_posts ON newest_posts.author_id = authors.id")
   end
+
+  def scoped_has_one
+    @authors = Author.includes(:scoped_has_one_newest_post)
+  end
 end
