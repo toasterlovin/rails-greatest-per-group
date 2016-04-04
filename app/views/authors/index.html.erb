@@ -1,0 +1,7 @@
+<h2>Authors</h2>
+
+<ul>
+  <%= content_tag_for :li, @authors do |author| %>
+    <%= author.full_name %>
+  <% end %>
+</ul>
