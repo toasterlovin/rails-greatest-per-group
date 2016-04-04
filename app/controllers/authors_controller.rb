@@ -15,4 +15,8 @@ class AuthorsController < ApplicationController
   def scoped_has_one
     @authors = Author.includes(:scoped_has_one_newest_post)
   end
+
+  def view_backed_model
+    @authors = Author.includes(:view_backed_model_newest_post)
+  end
 end

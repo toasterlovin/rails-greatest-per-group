@@ -1,0 +1,19 @@
+<h2>Authors</h2>
+<p>This view shows a list of authors along with the title of their newest post and the date that it was published. It implements a Greatest Per Group query – thus avoiding the N+1 query problem – using a view backed model.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Newest Post</th>
+      <th>Published</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= content_tag_for :tr, @authors do |author| %>
+      <td><%= author.full_name %></td>
+      <td><%= author.view_backed_model_newest_post.title %></td>
+      <td><%= author.view_backed_model_newest_post.created_at.strftime("%Y-%m-%d") %></td>
+    <% end %>
+  </tbody>
+</table>
