@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: J.D.
+  last_name: Salinger
+
+two:
+  first_name: Jane
+  last_name: Austen
+
+three:
+  first_name: Charles
+  last_name: Dickens
