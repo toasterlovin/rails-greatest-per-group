@@ -1,17 +1,20 @@
 <h2>Authors</h2>
-<p>This view shows a list of authors along with their newest post. But it does so using N+1 queries.</p>
+<p>This view shows a list of authors along with their newest post and the date that it was published. But it does so using N+1 queries.</p>
 
 <table>
   <thead>
     <tr>
       <th>Author</th>
       <th>Newest Post</th>
+      <th>Published</th>
     </tr>
   </thead>
   <tbody>
     <%= content_tag_for :tr, @authors do |author| %>
       <td><%= author.full_name %></td>
-      <td><%= author.posts.order(created_at: :desc).first.created_at.strftime("%Y-%m-%d") %></td>
+      <% newest_post = author.posts.order(created_at: :desc).first %>
+      <td><%= newest_post.title %></td>
+      <td><%= newest_post.created_at.strftime("%Y-%m-%d") %></td>
     <% end %>
   </tbody>
 </table>
