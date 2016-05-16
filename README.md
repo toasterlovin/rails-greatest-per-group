@@ -1,8 +1,9 @@
-## Greatest Per Group Queries in Postgres + Rails
+# Greatest Per Group Queries in Postgres + Rails
 
-This app exists to demonstrate the techniques described [in  a series
-of blog posts about Greatest Per Group queries and how to achieve them
-in PostgreSQL & Ruby on Rails](http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/).
+This app exists to demonstrate the techniques described [in  a series of
+blog posts about Greatest Per Group queries]
+(http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/)
+ and how to achieve them in PostgreSQL & Ruby on Rails].
 
 ## Installation
 
@@ -18,7 +19,8 @@ Then just visit localhost:5000 in your browser.
 
 #### Using Vagrant
 
-You can use Vagrant if you don't want to install a bunch of software on your local machine:
+Alternately, you can use Vagrant if you don't want to install a bunch of
+software on your local machine:
 
 ```
 git clone https://github.com/toasterlovin/rails-greatest-per-group.git
