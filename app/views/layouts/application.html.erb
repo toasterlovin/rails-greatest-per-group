@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GreatestPerGroup</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<nav class="navbar navbar-default">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Greatest Per Group in Rails</a>
-    </div>
+  <head>
+    <title>Greatest Per Group in Rails</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#greatest-per-group-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Greatest Per Group in Rails</a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "N+1 Query", authors_path %></li>
-        <li><%= link_to "Custom Query Methods", custom_query_methods_authors_path %></li>
-        <li><%= link_to "Scoped has_one Assocation", scoped_has_one_authors_path %></li>
-        <li><%= link_to "View Backed Model", view_backed_model_authors_path %></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <%= yield %>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="greatest-per-group-nav">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "N+1 Query", authors_path %></li>
+            <li><%= link_to "Custom Query Methods", custom_query_methods_authors_path %></li>
+            <li><%= link_to "Scoped has_one Assocation", scoped_has_one_authors_path %></li>
+            <li><%= link_to "View Backed Model", view_backed_model_authors_path %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+          <%= yield %>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+          <h4>About this App</h4>
+          <p>This Ruby on Rails app demonstrates the concepts encompassed in <%= link_to "a series of blog posts about Greatest Per Group queries in Rails", "http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/" %>. You can <%= link_to "view the source code on Github", "https://github.com/toasterlovin/rails-greatest-per-group" %>.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-</body>
+  </body>
 </html>
