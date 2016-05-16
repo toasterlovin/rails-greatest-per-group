@@ -1,9 +1,11 @@
 # Greatest Per Group Queries in Postgres + Rails
 
-This app demonstrates the techniques described [in  a series of blog posts
-about Greatest Per Group queries]
-(http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/)
- and how to achieve them in PostgreSQL & Ruby on Rails].
+This app demonstrates the techniques described [in  a series of blog posts about
+Greatest Per Group queries][blog] and how to achieve them in PostgreSQL & Ruby
+on Rails. It is live at [http://rails-greatest-per-group.herokuapp.com][web]
+
+[blog]: http://rails-greatest-per-group.herokuapp.com
+[web]: http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/
 
 ## Installation
 
