@@ -1,8 +1,8 @@
-# Greatest Per Group Queries in Postgres + Rails
+# Greatest Per Group Queries in Rails
 
 This app demonstrates the techniques described [in  a series of blog posts about
-Greatest Per Group queries][blog] and how to achieve them in PostgreSQL & Ruby
-on Rails.
+Greatest Per Group queries][blog] and how to achieve them in Ruby on Rails
+(using PostreSQL).
 
 You can see it in action at [http://rails-greatest-per-group.herokuapp.com][web]
 
@@ -19,7 +19,7 @@ rake db:setup
 rails server
 ```
 
-Then just visit localhost:5000 in your browser.
+Then just visit `localhost:5000` in your browser.
 
 #### Using Vagrant
 
@@ -37,4 +37,4 @@ rake db:setup
 rails server
 ```
 
-Then just visit localhost:8008 in your browser.
+Then just visit `localhost:8008` in your browser.
