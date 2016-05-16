@@ -1,5 +1,13 @@
 <h2>Authors</h2>
 <p>This view shows a list of authors along with the title of their newest post, but without the date that post was published. This is because it implements a Greatest Per Group query – thus, avoiding the N+1 query problem – using custom query methods, which are quite limited.</p>
+<p>View the source code:
+  <ul>
+    <li><%= link_to "Model", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/models/author.rb" %></li>
+    <li><%= link_to "View", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/views/authors/custom_query_methods.html.erb" %></li>
+    <li><%= link_to "Controller", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/controllers/authors_controller.rb#L6-L13" %></li>
+  </ul>
+</p>
+<p>Read the <%= link_to "blog post explaining this approach", "http://www.toasterlovin.com/greatest-per-group-rails-custom-query-methods/" %>.</p>
 
 <table class="table">
   <thead>
