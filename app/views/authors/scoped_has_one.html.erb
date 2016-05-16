@@ -1,5 +1,13 @@
 <h2>Authors</h2>
 <p>This view shows a list of authors along with the title of their newest post and the date that it was published. It implements a Greatest Per Group query – thus, avoiding the N+1 query problem – using a scoped <code>has_one</code> assocation.</p>
+<p>View the source code:
+  <ul>
+    <li><%= link_to "Model", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/models/author.rb#L4-L7" %></li>
+    <li><%= link_to "View", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/views/authors/scoped_has_one.html.erb" %></li>
+    <li><%= link_to "Controller", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/controllers/authors_controller.rb#L15-L17" %></li>
+  </ul>
+</p>
+<p>Read the <%= link_to "blog post explaining this approach", "http://www.toasterlovin.com/greatest-per-group-rails-scoped-has-one/" %>.</p>
 
 <table class="table">
   <thead>
