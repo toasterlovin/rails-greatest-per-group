@@ -6,8 +6,8 @@ Greatest Per Group queries][blog] and how to achieve them in Ruby on Rails
 
 You can see it in action at [http://rails-greatest-per-group.herokuapp.com][web]
 
-[blog]: http://rails-greatest-per-group.herokuapp.com
-[web]: http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/
+[web]: http://rails-greatest-per-group.herokuapp.com
+[blog]: http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/
 
 ## Installation
 
