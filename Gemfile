@@ -5,7 +5,7 @@ gem "rails", "4.2.11"
 gem "pg", "0.18.4"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
-gem "puma", "~> 4.3.1"
+gem "puma", "~> 4.3.9"
 gem "jquery-rails"
 gem "turbolinks"
 
