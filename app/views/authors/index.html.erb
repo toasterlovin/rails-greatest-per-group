@@ -1,12 +1,11 @@
 <h2>Authors</h2>
 <p>This view shows a list of authors along with their newest post and the date that it was published. But it does so using N+1 queries.</p>
-<p>View the source code:
-  <ul>
-    <li><%= link_to "Model", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/models/author.rb#L2" %></li>
-    <li><%= link_to "View", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/views/authors/index.html.erb#L15-L17" %></li>
-    <li><%= link_to "Controller", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/controllers/authors_controller.rb#L2-L4" %></li>
-  </ul>
-</p>
+<p>View the source code:</p>
+<ul>
+  <li><%= link_to "Model", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/models/author.rb#L2" %></li>
+  <li><%= link_to "View", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/views/authors/index.html.erb#L22-L24" %></li>
+  <li><%= link_to "Controller", "https://github.com/toasterlovin/rails-greatest-per-group/blob/master/app/controllers/authors_controller.rb#L2-L4" %></li>
+</ul>
 
 <table class="table">
   <thead>
@@ -17,11 +16,13 @@
     </tr>
   </thead>
   <tbody>
-    <%= content_tag_for :tr, @authors do |author| %>
-      <td><%= author.full_name %></td>
-      <% newest_post = author.posts.order(created_at: :desc).first %>
-      <td><%= newest_post.title %></td>
-      <td><%= newest_post.created_at.strftime("%Y-%m-%d") %></td>
+    <% @authors.each do |author| %>
+      <tr id="<%= dom_id(author) %>">
+        <td><%= author.full_name %></td>
+        <% newest_post = author.posts.order(created_at: :desc).first %>
+        <td><%= newest_post.title %></td>
+        <td><%= newest_post.created_at.strftime("%Y-%m-%d") %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>

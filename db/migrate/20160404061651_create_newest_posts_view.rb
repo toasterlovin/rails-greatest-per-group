@@ -1,4 +1,4 @@
-class CreateNewestPostsView < ActiveRecord::Migration
+class CreateNewestPostsView < ActiveRecord::Migration[4.2]
   def up
     execute <<-sql
       CREATE VIEW newest_posts AS

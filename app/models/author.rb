@@ -1,4 +1,4 @@
-class Author < ActiveRecord::Base
+class Author < ApplicationRecord
   has_many :posts
 
   has_one :scoped_has_one_newest_post, -> {

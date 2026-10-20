@@ -1,40 +1,30 @@
 # Greatest Per Group Queries in Rails
 
-This app demonstrates the techniques described [in  a series of blog posts about
+This app demonstrates the techniques described [in a series of blog posts about
 Greatest Per Group queries][blog] and how to achieve them in Ruby on Rails
-(using PostreSQL).
+(using PostgreSQL).
 
-You can see it in action at [http://rails-greatest-per-group.herokuapp.com][web]
-
-[web]: http://rails-greatest-per-group.herokuapp.com
 [blog]: http://www.toasterlovin.com/greatest-per-group-postgresql-distinct-on/
+
+## Requirements
+
+- Ruby 3.4 (see `.ruby-version`)
+- PostgreSQL
 
 ## Installation
 
 ```
 git clone https://github.com/toasterlovin/rails-greatest-per-group.git
 cd rails-greatest-per-group
-bundle install
-rake db:setup
-rails server
+bin/setup
 ```
 
-Then just visit `localhost:5000` in your browser.
+`bin/setup` installs gems, creates and seeds the database, and starts the
+server. Then just visit `localhost:3000` in your browser.
 
-#### Using Vagrant
-
-Alternately, you can use Vagrant if you don't want to install a bunch of
-software on your local machine:
+## Tests
 
 ```
-git clone https://github.com/toasterlovin/rails-greatest-per-group.git
-cd rails-greatest-per-group
-vagrant up
-vagrant ssh       # everything past here happens inside the virtual machine
-cd /vagrant
-bundle install
-rake db:setup
-rails server
+bin/rails test   # just the tests
+bin/ci           # tests, RuboCop, Brakeman and dependency audits
 ```
-
-Then just visit `localhost:8008` in your browser.
