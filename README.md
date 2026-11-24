@@ -26,5 +26,5 @@ server. Then just visit `localhost:3000` in your browser.
 
 ```
 bin/rails test   # just the tests
-bin/ci           # tests, RuboCop, Brakeman and dependency audits
+bin/ci           # tests and a dependency audit
 ```

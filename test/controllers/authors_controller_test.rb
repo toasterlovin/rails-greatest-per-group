@@ -1,6 +1,8 @@
 require "test_helper"
 
 class AuthorsControllerTest < ActionDispatch::IntegrationTest
+  include ActionView::RecordIdentifier
+
   NEWEST_POSTS = {
     salinger: [ "Franny and Zooey", "1961-01-01" ],
     austen: [ "Persuasion", "1817-01-01" ],
